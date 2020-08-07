@@ -113,11 +113,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
-}
+  // multiply first and secon element
+  var firstProduct = multiply(multArr[0],multArr[1])[0];
+  //multiply product of first and second to third index
+  var totalProduct = multiply(firstProduct,multArr[2])[0];
+  // string for result second element
+  var strProduct =  `The numbers ${multArr.toString()} have a product of ${totalProduct}.`
+  
+  // return array with the first index as product, second element is string The numbers 2,3,4 have a product of 24."  
+  return [totalProduct,strProduct];
+  }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
