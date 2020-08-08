@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { 
   var finalSum = a * b;
   // var string = ('the product of ' a ' and ' b ' is ' finalSum);
-  var string = `The product of ${a} and ${b} is ${finalSum}.`;
+  var string = `The product of ${a} and ${b} and ${c}  ${finalSum}.`;
   return [finalSum, string];
 }
 
@@ -55,8 +55,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sum(a, b) { //eslint-disable-line
+  var finalSum = a + b;
+  var finalString = `The sum of ${a} and ${b} is ${finalSum}.`
+  return [finalSum, finalString];
 
+  function multiply(a, b, c) {
+  return [multNum, `The product of ${a} and ${b} is ${a*b}.`];
+  }
+  function sumAndMultiply (a, b, c) {
+    var firstSum = sum(a,b)[0];
+    var totalSum = sum(firstSum,c)[0];
+    var firstMult = multiply (a,b)[0];
+  } var totalMult = multiply (firstMult, c)[0];
+
+  return [totalSum, totalMult, `${a} and ${b} and ${c} sum to $
+{totalSum}.`, `The product of ${a} and ${b} and ${c} is ${totalMult}
+.`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
