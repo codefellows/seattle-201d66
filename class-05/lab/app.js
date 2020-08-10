@@ -27,12 +27,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
+// The product of 5 and 9 is 45.
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  // The product of 5 and 9 is 45.
   var finalProd = a * b;
   var prodString = `The product of ${a} and ${b} is ${finalProd}.`
-  return [finalProd, string]
+  return [finalProd, prodString]
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -53,7 +53,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var sumOfTwo = sum(a, b);
+  var sumOfThree = sum(sumOfTwo[0], c);
 
+  var prodOfTwo = multiply(a,b);
+  var prodOfThree = multiply(prodOfTwo[0], c);
+
+  var sumString = `${a} and ${b} and ${c} sum to ${sumOfThree[0]}.`;
+  var prodString = `The product of ${a} and ${b} and ${c} is ${prodOfThree}.`;
+
+  return [sumOfThree[0], prodOfThree[0], sumString, prodString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
