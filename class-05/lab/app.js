@@ -8,7 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b, ) { //eslint-disable-line
+function sum(a, b) { //eslint-disable-line
     var finalSum = a + b;
     var string = `The sum of ${a} and ${b} is ${finalSum}.`
     return [finalSum, string];
@@ -29,7 +29,7 @@ the first element is the product of those numbers, and the second element is a s
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b, ) { //eslint-disable-line
+function multiply(a, b) { //eslint-disable-line
     var finalSum = a * b;
     var string = `The product of ${a} and ${b} is ${finalSum}.`
     return [finalSum, string];
@@ -56,18 +56,15 @@ for string concatenation.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-// function sumAndMultiply(a, b, c) { //eslint-disable-line
-//     sum(a, b, c) {
-//         var sumTotal = sum();
-//     }
-//     multiply(a, b, c) {
-//         var multiplyTotal = multiply();
-//     }
-//     var stringA = `${a} and ${b} and ${c} sum to ${sumTotal}.`;
-//     var stringB = `The product of ${a} and ${b} and ${c} is ${multiplyTotal}.`;
-//     return [`${sumTotal}, ${mulitplyTotal}, ${stringA}, ${stringB}`];
-
-// }
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var addOne = sum(a, b);
+    var add = sum(addOne, c);
+    var timesOne = multiply(a, b);
+    var times = multiply(times, c);
+    var arrayOne = `${a} and ${b} and ${c} sum to ${add}.`
+    var arrayTwo = `The product of ${a} and ${b} and ${c} is ${times}.`
+    return [add, times, arrayOne, arrayTwo];
+}
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
