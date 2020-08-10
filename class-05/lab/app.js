@@ -53,11 +53,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  var logiSum = a + b + c;
-  var logiMulti = a * b * c;
-  var logiStringOne = `${a} and ${b} and ${c} sum to ${logiSum}.`;
-  var logiStringTwo = `The product of ${a} and ${b} and ${c} is ${logiMulti}.`;
-  return [logiSum, logiMulti, logiStringOne, logiStringTwo];
+  var firstSum = sum(a,b)[0];
+  var totalSum = sum(firstSum, c)[0];
+  var firstProduct = multiply(a,b)[0];
+  var totalProduct = multiply(firstProduct,c)[0];
+  var sumString = `${a} and ${b} and ${c} sum to ${totalSum}.`;
+  var productString = `The product of ${a} and ${b} and ${c} is ${totalProduct}.`
+  return [totalSum, totalProduct, sumString, productString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -79,12 +81,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var total = 0;
+  for(var i=0; i<sumArr.length; i++){
+    total = sum(total,sumArr[i])[0];
+    var sumString = `${testArray} was passed in as an array of numbers, and ${total} is their sum.`;
+  }
+  return [total, sumString];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
