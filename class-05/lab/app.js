@@ -63,6 +63,7 @@ var string2 = `The product of ${a} and ${b} and ${c} is ${finalTimes}.`;
 return[finalAdd, finalTimes, string1, string2];
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
@@ -82,12 +83,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var firstSum = sum(2, 3)[0];
+var finalSum = sum(firstSum, 4)[0];
+var string = `2,3,4 was passed in as an array of numbers, and ${finalSum} is their sum.`
+return[finalSum, string];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
