@@ -14,7 +14,6 @@ function sum(a, b) { //eslint-disable-line
   return [finalSum, string];
 }
 
-// Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -28,12 +27,19 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
-
+function multiply(a, b) { 
+  var finalSum = a * b;
+  // var string = ('the product of ' a ' and ' b ' is ' finalSum);
+  var string = `The product of ${a} and ${b} and ${c}  ${finalSum}.`;
+  return [finalSum, string];
 }
 
+  // var string = `The sum of ${a} and ${b} is ${finalSum}.`
+
+
+
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -49,8 +55,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sum(a, b) { //eslint-disable-line
+  var finalSum = a + b;
+  var finalString = `The sum of ${a} and ${b} is ${finalSum}.`
+  return [finalSum, finalString];
 
+  function multiply(a, b, c) {
+  return [multNum, `The product of ${a} and ${b} is ${a*b}.`];
+  }
+  function sumAndMultiply (a, b, c) {
+    var firstSum = sum(a,b)[0];
+    var totalSum = sum(firstSum,c)[0];
+    var firstMult = multiply (a,b)[0];
+  } var totalMult = multiply (firstMult, c)[0];
+
+  return [totalSum, totalMult, `${a} and ${b} and ${c} sum to $
+{totalSum}.`, `The product of ${a} and ${b} and ${c} is ${totalMult}
+.`];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
