@@ -1,5 +1,8 @@
 # Lab: Shopping Cart
 
+# Authors
+Spencer Lazzar and Keith Musig
+
 Read the document in its entirety before beginning your lab. To view this lab assignment in its own tab, click [HERE](https://codefellows.github.io/code-201-guide/curriculum/class-14/lab/){:target="_blank"}
 
 ## Problem Domain
