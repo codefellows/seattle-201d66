@@ -1,1 +1,11 @@
-/* TODO: Make it awesome */
+h1{
+    font-size: 4rem;
+    padding-bottom: 30px;
+    padding-top: 10px; 
+}
+
+body{
+    background-color: lightblue;
+    text-align:center;
+    font-size: 20px;
+}
